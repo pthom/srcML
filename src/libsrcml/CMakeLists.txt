@@ -150,7 +150,7 @@ install(EXPORT libsrcml_shared_Targets
         COMPONENT DEVLIBS)
 
 configure_package_config_file(
-    ${CMAKE_SOURCE_DIR}/srcMLConfig.cmake.in ${CMAKE_BINARY_DIR}/srcMLConfig.cmake
+    ${PROJECT_SOURCE_DIR}/srcMLConfig.cmake.in ${CMAKE_BINARY_DIR}/srcMLConfig.cmake
     INSTALL_DESTINATION "${CONFIG_FILE_DESTINATION}"
     NO_SET_AND_CHECK_MACRO
     NO_CHECK_REQUIRED_COMPONENTS_MACRO

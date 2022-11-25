@@ -25,14 +25,14 @@ set(CPACK_INNOSETUP_USE_MODERN_WIZARD ON)
 set(CPACK_INNOSETUP_SETUP_DisableWelcomePage OFF)
 
 # The path to a custom installer .ico file. This is displayed in the file explorer
-set(CPACK_INNOSETUP_ICON_FILE ${CMAKE_SOURCE_DIR}/package/srcml_icon.ico)
+set(CPACK_INNOSETUP_ICON_FILE ${PROJECT_SOURCE_DIR}/package/srcml_icon.ico)
 
 # A branding image that will be displayed inside the installer (used by GUI installers).
 # This is displayed in the upper right-hand corner of each page
-set(CPACK_PACKAGE_ICON ${CMAKE_SOURCE_DIR}/package/srcml_icon_inno.bmp)
+set(CPACK_PACKAGE_ICON ${PROJECT_SOURCE_DIR}/package/srcml_icon_inno.bmp)
 
 # The welcome page display image
-set(CPACK_INNOSETUP_SETUP_WizardImageFile ${CMAKE_SOURCE_DIR}/package/background_new.bmp)
+set(CPACK_INNOSETUP_SETUP_WizardImageFile ${PROJECT_SOURCE_DIR}/package/background_new.bmp)
 
 # Make the client required
 set(CPACK_COMPONENT_SRCML_REQUIRED TRUE)
@@ -42,7 +42,7 @@ set(CPACK_INNOSETUP_SETUP_AlwaysShowDirOnReadyPage ON)
 
 # Specify a particular icon file (either an executable or an .ico file) to display for the Uninstall entry in the
 # Add/Remove Programs Control Panel applet
-set(CPACK_INNOSETUP_SETUP_UninstallDisplayIcon ${CMAKE_SOURCE_DIR}/package/srcml_icon.ico)
+set(CPACK_INNOSETUP_SETUP_UninstallDisplayIcon ${PROJECT_SOURCE_DIR}/package/srcml_icon.ico)
 
 # Extend functionality with custom script, inno_extension_script.iss
 set(CPACK_INNOSETUP_EXTRA_SCRIPTS ${CMAKE_BINARY_DIR}/inno_extension_script.iss)

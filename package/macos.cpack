@@ -26,7 +26,7 @@ set(CPACK_ARCHIVE_SRCML_FILE_NAME "${CPACK_COMPONENT_SRCML_DISPLAY_NAME}-${PROJE
 # * Removes readme
 # * Adds conclusion
 # * Sets background image
-set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/package")
+set(CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/package")
 
 # For archives, all components are in one file
 set(CPACK_ARCHIVE_COMPONENT_INSTALL OFF)
@@ -41,16 +41,16 @@ set(CPACK_COMPONENTS_GROUPING "ONE_PER_GROUP")
 set(CPACK_PACKAGING_INSTALL_PREFIX /usr/local)
 
 # Welcome content
-set(CPACK_RESOURCE_FILE_WELCOME ${CMAKE_SOURCE_DIR}/package/welcome.html)
+set(CPACK_RESOURCE_FILE_WELCOME ${PROJECT_SOURCE_DIR}/package/welcome.html)
 
 # License
-set(CPACK_RESOURCE_FILE_LICENSE ${CMAKE_SOURCE_DIR}/COPYING.txt)
+set(CPACK_RESOURCE_FILE_LICENSE ${PROJECT_SOURCE_DIR}/COPYING.txt)
 
 # Where to find additional files
 set(CPACK_PRODUCTBUILD_RESOURCES_DIR ${CMAKE_BINARY_DIR}/pkg_resources)
 
 # Background image
-configure_file(${CMAKE_SOURCE_DIR}/package/background.png ${CPACK_PRODUCTBUILD_RESOURCES_DIR}/background.png COPYONLY)
+configure_file(${PROJECT_SOURCE_DIR}/package/background.png ${CPACK_PRODUCTBUILD_RESOURCES_DIR}/background.png COPYONLY)
 
 # Conclusion
-configure_file(${CMAKE_SOURCE_DIR}/package/installed.html ${CPACK_PRODUCTBUILD_RESOURCES_DIR}/installed.html COPYONLY)
+configure_file(${PROJECT_SOURCE_DIR}/package/installed.html ${CPACK_PRODUCTBUILD_RESOURCES_DIR}/installed.html COPYONLY)

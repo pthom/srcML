@@ -7,11 +7,11 @@
 # CPack configuration for all installers
 
 # Copy preset file to build directory
-configure_file(${CMAKE_SOURCE_DIR}/CMakePresets.json ${CMAKE_BINARY_DIR} COPYONLY)
+configure_file(${PROJECT_SOURCE_DIR}/CMakePresets.json ${CMAKE_BINARY_DIR} COPYONLY)
 
 # Copy user preset file to the build directory if it exists
-if(EXISTS ${CMAKE_SOURCE_DIR}/CMakeUserPresets.json)
-    configure_file(${CMAKE_SOURCE_DIR}/CMakeUserPresets.json ${CMAKE_BINARY_DIR} COPYONLY)
+if(EXISTS ${PROJECT_SOURCE_DIR}/CMakeUserPresets.json)
+    configure_file(${PROJECT_SOURCE_DIR}/CMakeUserPresets.json ${CMAKE_BINARY_DIR} COPYONLY)
 endif()
 
 # especially for archives
@@ -28,7 +28,7 @@ set(SRCML_PACKAGE_RELEASE 1)
 set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "srcML Toolkit")
 
 # description
-set(CPACK_PACKAGE_DESCRIPTION_FILE ${CMAKE_SOURCE_DIR}/package/welcome.html)
+set(CPACK_PACKAGE_DESCRIPTION_FILE ${PROJECT_SOURCE_DIR}/package/welcome.html)
 
 # vendor
 set(CPACK_PACKAGE_VENDOR "srcML, LLC.")
@@ -40,13 +40,13 @@ set(CPACK_PACKAGE_CONTACT "Software Development Laboratories <srcML.org>")
 # set as part of project()
 
 # license
-set(CPACK_RESOURCE_FILE_LICENSE ${CMAKE_SOURCE_DIR}/COPYING.txt)
+set(CPACK_RESOURCE_FILE_LICENSE ${PROJECT_SOURCE_DIR}/COPYING.txt)
 
 # README
-set(CPACK_RESOURCE_FILE_README ${CMAKE_SOURCE_DIR}/README.md)
+set(CPACK_RESOURCE_FILE_README ${PROJECT_SOURCE_DIR}/README.md)
 
 # welcome message
-set(CPACK_RESOURCE_FILE_WELCOME ${CMAKE_SOURCE_DIR}/package/welcome.html)
+set(CPACK_RESOURCE_FILE_WELCOME ${PROJECT_SOURCE_DIR}/package/welcome.html)
 
 # strip executables
 set(CPACK_STRIP_FILES ON)
@@ -76,7 +76,7 @@ cpack_add_component(DEVLIBS
                     INSTALL_TYPES DEVELOPER)
 
 # Copy and rename the README file for the proper extension
-configure_file(${CMAKE_SOURCE_DIR}/README.md ${CMAKE_BINARY_DIR}/README.txt COPYONLY)
+configure_file(${PROJECT_SOURCE_DIR}/README.md ${CMAKE_BINARY_DIR}/README.txt COPYONLY)
 set(CPACK_RESOURCE_FILE_README ${CMAKE_BINARY_DIR}/README.txt)
 
 # Generators are defined in the *.cpack files
