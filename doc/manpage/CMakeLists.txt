@@ -122,13 +122,13 @@ set(STATUS_INTERNAL_ERROR "2")
 set(PRETTY_FLAG_LONG "pretty")
 
 # Custom commands for creating things using the ronn executable
-configure_file(${CMAKE_SOURCE_DIR}/doc/manpage/srcml.cfg ${CMAKE_BINARY_DIR}/srcml.md)
+configure_file(${PROJECT_SOURCE_DIR}/doc/manpage/srcml.cfg ${CMAKE_BINARY_DIR}/srcml.md)
 add_custom_command(OUTPUT ${CMAKE_BINARY_DIR}/srcml.1
     COMMAND ${RONN_EXE} ${CMAKE_BINARY_DIR}/srcml.1.md --manual=srcml
     DEPENDS ${CMAKE_BINARY_DIR}/srcml.1.md
 )
 
-configure_file(${CMAKE_SOURCE_DIR}/doc/manpage/srcml.cfg ${CMAKE_BINARY_DIR}/srcml.1.md)
+configure_file(${PROJECT_SOURCE_DIR}/doc/manpage/srcml.cfg ${CMAKE_BINARY_DIR}/srcml.1.md)
 add_custom_command(OUTPUT ${CMAKE_BINARY_DIR}/srcml.html 
     COMMAND ${RONN_EXE} ${CMAKE_BINARY_DIR}/srcml.md --manual=srcml
     DEPENDS ${CMAKE_BINARY_DIR}/srcml.md

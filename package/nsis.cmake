@@ -24,8 +24,8 @@ set(CPACK_SYSTEM_NAME "windows-x86_64")
 set(CPACK_ARCHIVE_COMPONENT_INSTALL OFF)
 
 # set icon
-install(FILES ${CMAKE_SOURCE_DIR}/package/srcml_icon.ico DESTINATION . COMPONENT SRCML)
-set(CPACK_WIX_PRODUCT_ICON ${CMAKE_SOURCE_DIR}/package/srcml_icon.ico)
+install(FILES ${PROJECT_SOURCE_DIR}/package/srcml_icon.ico DESTINATION . COMPONENT SRCML)
+set(CPACK_WIX_PRODUCT_ICON ${PROJECT_SOURCE_DIR}/package/srcml_icon.ico)
 
 # directory name
 set(CPACK_PACKAGE_INSTALL_DIRECTORY "srcML")

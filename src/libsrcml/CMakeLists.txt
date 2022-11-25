@@ -102,9 +102,9 @@ endif()
 # Restrict exported symbols to those in the export list
 # The "-Wl" passes the option to the linker
 if(APPLE)
-    set_target_properties(libsrcml_shared libsrcml_static PROPERTIES LINK_FLAGS "-Wl,-exported_symbols_list ${CMAKE_SOURCE_DIR}/src/libsrcml/export_list")
+    set_target_properties(libsrcml_shared libsrcml_static PROPERTIES LINK_FLAGS "-Wl,-exported_symbols_list ${PROJECT_SOURCE_DIR}/src/libsrcml/export_list")
 elseif(NOT WIN32)
-    set_target_properties(libsrcml_shared libsrcml_static PROPERTIES LINK_FLAGS "-Wl,--version-script=${CMAKE_SOURCE_DIR}/src/libsrcml/libsrcml.version")
+    set_target_properties(libsrcml_shared libsrcml_static PROPERTIES LINK_FLAGS "-Wl,--version-script=${PROJECT_SOURCE_DIR}/src/libsrcml/libsrcml.version")
 endif()
 
 # which types of libraries
@@ -133,7 +133,7 @@ install(EXPORT libsrcml_shared_Targets
         COMPONENT DEVLIBS)
 
 configure_package_config_file(
-    ${CMAKE_SOURCE_DIR}/srcMLConfig.cmake.in ${CMAKE_BINARY_DIR}/srcMLConfig.cmake
+    ${PROJECT_SOURCE_DIR}/srcMLConfig.cmake.in ${CMAKE_BINARY_DIR}/srcMLConfig.cmake
     INSTALL_DESTINATION "${CONFIG_FILE_DESTINATION}"
     NO_SET_AND_CHECK_MACRO
     NO_CHECK_REQUIRED_COMPONENTS_MACRO

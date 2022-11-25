@@ -21,7 +21,7 @@
 set(CPACK_DEBIAN_PACKAGE_DEBUG OFF)
 
 # icon
-set(CPACK_PACKAGE_ICON ${CMAKE_SOURCE_DIR}/package/srcml_icon.ico)
+set(CPACK_PACKAGE_ICON ${PROJECT_SOURCE_DIR}/package/srcml_icon.ico)
 
 # Generate user and SRCMLDEV rpms
 # Note: Yes, this is CPACK_DEB_, not CPACK_DEBIAN
@@ -65,8 +65,8 @@ set(CPACK_DEBIAN_SRCML_PACKAGE_PRIORITY "optional")
 set(CPACK_DEBIAN_SRCMLDEV_PACKAGE_PRIORITY "optional")
 
 # Copyright file - required by lintian
-# install(FILES ${CMAKE_SOURCE_DIR}/COPYING.txt DESTINATION share/doc/srcml RENAME copyright COMPONENT SRCML)
-# install(FILES ${CMAKE_SOURCE_DIR}/COPYING.txt DESTINATION share/doc/srcml RENAME copyright COMPONENT SRCMLDEV)
+# install(FILES ${PROJECT_SOURCE_DIR}/COPYING.txt DESTINATION share/doc/srcml RENAME copyright COMPONENT SRCML)
+# install(FILES ${PROJECT_SOURCE_DIR}/COPYING.txt DESTINATION share/doc/srcml RENAME copyright COMPONENT SRCMLDEV)
 
 # Changelog file - required by lintian
 # file(WRITE ${CMAKE_BINARY_DIR}/changelog.Debian
