@@ -19,7 +19,7 @@ list(REMOVE_DUPLICATES CPACK_GENERATOR)
 set(CPACK_RPM_PACKAGE_DEBUG OFF)
 
 # icon
-set(CPACK_PACKAGE_ICON ${CMAKE_SOURCE_DIR}/package/srcml_icon.ico)
+set(CPACK_PACKAGE_ICON ${PROJECT_SOURCE_DIR}/package/srcml_icon.ico)
 
 # Generate user and DEVLIBS rpms
 set(CPACK_RPM_COMPONENT_INSTALL ON)
