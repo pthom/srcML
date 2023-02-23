@@ -10,6 +10,8 @@ set(VCPKG_BUILD_TYPE "release")
 
 cmake_minimum_required(VERSION 3.24)
 
+set(CMAKE_CXX_STANDARD 17)
+
 # Handles problem of commandline tools interfering with Xcode includes
 if(APPLE)
     set(PKG_CONFIG_EXECUTABLE "/usr/bin/true")
