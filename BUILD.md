@@ -41,7 +41,7 @@ cmake . -DBUILD_CLIENT_TESTS=OFF -DBUILD_LIBSRCML_TESTS=ON -DBUILD_PARSER_TESTS=
 The main packages required may be installed via brew:
 
 ```console
-brew install cmake
+    brew install antlr2 boost cmake
 ```
 
 Libarchive greater than 3.0.0 is required. For macOS previous to Catalina (19.*.*), libarchive.a 3.3.* must be statically included. Use brew to install a more recent version:
