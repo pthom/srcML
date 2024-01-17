@@ -32,7 +32,8 @@ if(NOT antlrsrc_POPULATED)
     # Fetch the content using previously declared details
     FetchContent_Populate(antlrsrc)
 
-    if (NOT antlrsrc_PATCHED)
+    #if (NOT antlrsrc_PATCHED)
+    if (ON)
         # Add needed include file for CharScanner.hpp
         # Comment out use of std::binary_function, deprecated in C++11 and removed in C++17
         set(CHARSCANNER_HPP "${antlrsrc_SOURCE_DIR}/lib/cpp/antlr/CharScanner.hpp")
