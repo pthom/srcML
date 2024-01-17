@@ -32,7 +32,8 @@ FetchContent_MakeAvailable(antlrsrc)
 # Custom marker file to check if modifications have been made
 set(MARKER_FILE "${antlrsrc_SOURCE_DIR}/antlr_patched.marker")
 # Fetch and modify only once
-if(NOT EXISTS ${MARKER_FILE})
+#if(NOT EXISTS ${MARKER_FILE})
+if (ON)
     message(STATUS "Modifying ANTLR sources")
 
     # Add needed include file for CharScanner.hpp
