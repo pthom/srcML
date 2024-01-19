@@ -30,4 +30,7 @@ add_link_options("${SRCML_GLOBAL_LINK_OPTIONS}")
     add_subdirectory(parser)
     add_subdirectory(libsrcml)
 # endif()
-add_subdirectory(client)
+
+if (NOT SRCML_CALLER_PYTHON)
+    add_subdirectory(client)
+endif()
