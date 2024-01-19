@@ -56,7 +56,7 @@ namespace {
         // process list of nodes
         for (const xmlNode* node = top_node; node != NULL && (!top || node == top_node); node = node->next) {
             if (node->type == XML_TEXT_NODE) {
-                xmlChar* t = xmlNodeGetContent(node);
+                xmlChar* t = xmlNodeGetContent(const_cast<xmlNode*>(node));
                 std::string_view st((const char*) t);
 
                 // add normalized whitespace to the text
