@@ -59,9 +59,11 @@ include(GNUInstallDirs)
 enable_testing()
 
 add_subdirectory(src)
-add_subdirectory(test)
-add_subdirectory(doc)
-add_subdirectory(examples)
+if(NOT SRCML_CALLER_PYTHON)
+    add_subdirectory(test)
+    add_subdirectory(doc)
+    add_subdirectory(examples)
 
-# packaging
-add_subdirectory(package)
+    #packaging
+    add_subdirectory(package)
+endif()
