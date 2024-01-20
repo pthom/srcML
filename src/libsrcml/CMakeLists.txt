@@ -98,7 +98,7 @@ set_target_properties(libsrcml_static PROPERTIES
     VISIBILITY_INLINES_HIDDEN ON
 )
 target_include_directories(libsrcml_static PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>)
-target_link_libraries(libsrcml_static PRIVATE LibXml2::LibXml2 Iconv::Iconv LibXslt::LibXslt LibXslt::LibExslt)
+target_link_libraries(libsrcml_static PUBLIC LibXml2::LibXml2 Iconv::Iconv LibXslt::LibXslt LibXslt::LibExslt)
 
 # Building shared library for srcML
 add_library(libsrcml_shared SHARED)
