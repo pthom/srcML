@@ -85,7 +85,7 @@ add_library(parser OBJECT
 set_target_properties(parser PROPERTIES POSITION_INDEPENDENT_CODE ON)
 target_include_directories(parser SYSTEM PUBLIC ${antlrsrc_SOURCE_DIR}/lib/cpp)
 target_include_directories(parser PRIVATE . ${CMAKE_GENERATED_SOURCE_DIR} PUBLIC . SYSTEM PUBLIC ${CMAKE_GENERATED_SOURCE_DIR})
-target_link_libraries(parser PRIVATE LibXml2::LibXml2 antlr)
+target_link_libraries(parser PRIVATE LibXml2::LibXml2 Iconv::Iconv antlr)
 target_include_directories(parser PRIVATE $<TARGET_PROPERTY:TinySHA1,INTERFACE_INCLUDE_DIRECTORIES>)
 if(SRCML_DEBUG_PARSER)
     set_source_files_properties(${CMAKE_GENERATED_SOURCE_DIR}/srcMLParser.cpp PROPERTIES COMPILE_DEFINITIONS SRCML_DEBUG_PARSER)
